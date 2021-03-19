@@ -12,15 +12,18 @@ using System.Threading.Tasks;
 
 namespace TestingAssignment
 {
-	class Program
+	public class Program
 	{
 		static double premium;
+
 		public static void Main(string[] args)
-		{
+		{ 
+			
 			//Variables
 			string gender;
 			int age=0;
-		
+			double PremiumTotal = 0;
+
 			//input
 			Write("Enter Gender: ");
 			gender = Console.ReadLine();
@@ -28,21 +31,19 @@ namespace TestingAssignment
 			Write("Enter age: ");
 			age = int.Parse(Console.ReadLine());
 
+			//calling method
+			PremiumTotal = CalcPremium(premium, age, gender);
+
 			//output
 			WriteLine("Your gender is: {0}", gender);
 			WriteLine("Your age is: {0}", age);
-			WriteLine("Your premium is: {0}", premium);
-
-			//calling method
-			CalcPremium(premium, age, gender); 
-
+			WriteLine("Your premium is: {0}", PremiumTotal.ToString());
 		}//end of main
 
 
 		static public double CalcPremium(double premium, int age, string gender)
 		{
-		premium = 0;
-
+			premium = 0;
 
 			if (gender == "female")
 			{
@@ -51,14 +52,14 @@ namespace TestingAssignment
 					premium = 5.0;
 				}
 				else if (age >= 31)
-			    {
+				{
 					premium = 3.50;
 				}
-				else if(age >= 50)
+				else if (age >= 50)
 				{
 					premium = premium / 2;
 				}
-			else
+				else
 				{
 					premium = 0.0;
 				}
@@ -70,11 +71,11 @@ namespace TestingAssignment
 				{
 					premium = 6.0;
 				}
-				else if(age >= 36)
-		     	{
+				else if (age >= 36)
+				{
 					premium = 5.0;
 				}
-			else if(age >= 50)
+				else if (age >= 50)
 				{
 					premium = premium / 2;
 				}
@@ -86,8 +87,6 @@ namespace TestingAssignment
 
 
 			return premium;
-
-			
 		}
 	}
 }
