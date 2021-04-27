@@ -21,7 +21,7 @@ namespace TestingAssignment.tests
             Program i = new Program();
             double expected = 0;
             // act
-            int actual = i.CalcPremium(20, "Female");
+            double actual = i.CalcPremium(20, "Female");
             // assert
             Assert.That(expected, actual, Is.InRange(18, 30));
         }
