@@ -6,7 +6,7 @@ using NUnit.Framework;
 using static System.Console;
 using TestingAssignment; // note we must reference the project we are testing
 //using Microsoft.Net.Test.SDK;
-using Program;
+//using Program;
 
 namespace TestingAssignment.tests
 
