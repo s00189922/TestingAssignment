@@ -41,7 +41,7 @@ namespace TestingAssignment
 		}//end of main
 
 
-		static public double CalcPremium(double premium, int age, string gender)
+		public double CalcPremium(int age, string gender)
 		{
 			premium = 0;
 
