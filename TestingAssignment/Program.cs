@@ -32,7 +32,7 @@ namespace TestingAssignment
 			age = int.Parse(Console.ReadLine());
 
 			//calling method
-			PremiumTotal = CalcPremium(premium, age, gender);
+			PremiumTotal = CalcPremium(age, gender);
 
 			//output
 			WriteLine("Your gender is: {0}", gender);

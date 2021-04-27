@@ -5,7 +5,7 @@ using System.Linq;
 using NUnit.Framework;
 using static System.Console;
 using TestingAssignment; // note we must reference the project we are testing
-//using Microsoft.Net.Test.SDK;
+using Microsoft.Net.Test.SDK;
 //using Program;
 
 namespace TestingAssignment.tests
@@ -47,7 +47,7 @@ namespace TestingAssignment.tests
             // act
             double actual = i.CalcPremium(32, "female");
             // assert
-            Assert.Is.GreaterThanOrEqualTo(31)(expected, actual );
+            Assert.That(expected, actual, Is.GreaterThanOrEqualTo(31));
 
 
         }
@@ -124,9 +124,6 @@ namespace TestingAssignment.tests
             double actual = i.CalcPremium(10, "other");
             // assert
             Assert.That(expected, actual, Is.LessThan(18));
-
-
-
         }
     }
 }
